@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5EABEC3-A5CB-413A-A49D-765D2FCCEA7E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LandReg2023</RootNamespace>
+    <AssemblyName>LandReg2023</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin, Version=5.14.5506.26196, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxMin.5.14.5506.26202\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=2.1.7.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Core.2.1.7\lib\net472\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=2.1.7.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WinForms.2.1.7\lib\net472\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=2.1.7.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WinPresentation.2.1.7\lib\net472\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.1.4.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.1.4\lib\net462\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.9.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.9.0\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.5\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.5\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Busi_Gov_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busi_Gov_Login.Designer.cs">
+      <DependentUpon>Busi_Gov_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeGUI.Designer.cs">
+      <DependentUpon>EmployeeGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeNewAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeNewAccount.Designer.cs">
+      <DependentUpon>EmployeeNewAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_login.Designer.cs">
+      <DependentUpon>Employee_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="getGPSLocations.cs" />
+    <Compile Include="InsertLandDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertLandDetails.Designer.cs">
+      <DependentUpon>InsertLandDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="landTransfers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="landTransfers.Designer.cs">
+      <DependentUpon>landTransfers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land_Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land_Registration.Designer.cs">
+      <DependentUpon>Land_Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LTransfers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LTransfers.Designer.cs">
+      <DependentUpon>LTransfers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OTPGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OTPGenerator.Designer.cs">
+      <DependentUpon>OTPGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalAccountManage.cs" />
+    <Compile Include="Personal_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal_login.Designer.cs">
+      <DependentUpon>Personal_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gov_BusinessNewAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gov_BusinessNewAccount.Designer.cs">
+      <DependentUpon>Gov_BusinessNewAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPersonalAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPersonalAccount.Designer.cs">
+      <DependentUpon>NewPersonalAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransferLand.cs" />
+    <Compile Include="User_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Information.Designer.cs">
+      <DependentUpon>User_Information.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Busi_Gov_Login.resx">
+      <DependentUpon>Busi_Gov_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeGUI.resx">
+      <DependentUpon>EmployeeGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeNewAccount.resx">
+      <DependentUpon>EmployeeNewAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_login.resx">
+      <DependentUpon>Employee_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertLandDetails.resx">
+      <DependentUpon>InsertLandDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="landTransfers.resx">
+      <DependentUpon>landTransfers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land_Registration.resx">
+      <DependentUpon>Land_Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LTransfers.resx">
+      <DependentUpon>LTransfers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OTPGenerator.resx">
+      <DependentUpon>OTPGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal_login.resx">
+      <DependentUpon>Personal_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gov_BusinessNewAccount.resx">
+      <DependentUpon>Gov_BusinessNewAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPersonalAccount.resx">
+      <DependentUpon>NewPersonalAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="User_Information.resx">
+      <DependentUpon>User_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMapWinGIS">
+      <Guid>{C368D713-CC5F-40ED-9F53-F84FE197B96A}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MapWinGIS">
+      <Guid>{C368D713-CC5F-40ED-9F53-F84FE197B96A}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
+</Project>
