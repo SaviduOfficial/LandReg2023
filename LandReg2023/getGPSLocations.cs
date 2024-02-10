@@ -17,7 +17,7 @@ namespace LandReg2023
             foreach (string item in gpsList){
                 id = id + (Convert.ToDouble(item));
             }id = id / (5);
-            DateTime dateTime = new DateTime();
+            DateTime dateTime = DateTime.Now; // datetime now without a constructor
 
             //Generating Id for the Land
             string Lid = Convert.ToString(id) + dateTime;  

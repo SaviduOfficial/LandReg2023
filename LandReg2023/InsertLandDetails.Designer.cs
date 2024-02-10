@@ -44,7 +44,6 @@ namespace LandReg2023
             this.label7 = new System.Windows.Forms.Label();
             this.txtBoxLandtype = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtBoxConsInLand = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtBoxNorth = new System.Windows.Forms.TextBox();
@@ -55,9 +54,12 @@ namespace LandReg2023
             this.label13 = new System.Windows.Forms.Label();
             this.txtBoxWest = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtBoxotherinfo = new System.Windows.Forms.TextBox();
+            this.txtBoxinfo = new System.Windows.Forms.TextBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtBoxConsInLand = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -79,7 +81,7 @@ namespace LandReg2023
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(358, 374);
+            this.btnBack.Location = new System.Drawing.Point(358, 389);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 2;
@@ -89,7 +91,7 @@ namespace LandReg2023
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 68);
+            this.label2.Location = new System.Drawing.Point(48, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 0;
@@ -98,7 +100,7 @@ namespace LandReg2023
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(113, 91);
+            this.label3.Location = new System.Drawing.Point(113, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 0;
@@ -114,7 +116,7 @@ namespace LandReg2023
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(98, 120);
+            this.label4.Location = new System.Drawing.Point(98, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 0;
@@ -162,7 +164,7 @@ namespace LandReg2023
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(51, 198);
+            this.label7.Location = new System.Drawing.Point(48, 198);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 13);
             this.label7.TabIndex = 0;
@@ -178,24 +180,17 @@ namespace LandReg2023
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 224);
+            this.label8.Location = new System.Drawing.Point(9, 224);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(130, 13);
             this.label8.TabIndex = 0;
             this.label8.Text = "Constructions in the Land:";
             // 
-            // txtBoxConsInLand
-            // 
-            this.txtBoxConsInLand.Location = new System.Drawing.Point(148, 221);
-            this.txtBoxConsInLand.Name = "txtBoxConsInLand";
-            this.txtBoxConsInLand.Size = new System.Drawing.Size(158, 20);
-            this.txtBoxConsInLand.TabIndex = 1;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(28, 270);
+            this.label9.Location = new System.Drawing.Point(28, 283);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(130, 15);
             this.label9.TabIndex = 0;
@@ -204,7 +199,7 @@ namespace LandReg2023
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(48, 301);
+            this.label10.Location = new System.Drawing.Point(48, 314);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(93, 13);
             this.label10.TabIndex = 0;
@@ -212,7 +207,7 @@ namespace LandReg2023
             // 
             // txtBoxNorth
             // 
-            this.txtBoxNorth.Location = new System.Drawing.Point(148, 298);
+            this.txtBoxNorth.Location = new System.Drawing.Point(148, 311);
             this.txtBoxNorth.Name = "txtBoxNorth";
             this.txtBoxNorth.Size = new System.Drawing.Size(158, 20);
             this.txtBoxNorth.TabIndex = 1;
@@ -220,7 +215,7 @@ namespace LandReg2023
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(48, 327);
+            this.label11.Location = new System.Drawing.Point(48, 340);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(95, 13);
             this.label11.TabIndex = 0;
@@ -228,7 +223,7 @@ namespace LandReg2023
             // 
             // txtBoxSouth
             // 
-            this.txtBoxSouth.Location = new System.Drawing.Point(148, 324);
+            this.txtBoxSouth.Location = new System.Drawing.Point(148, 337);
             this.txtBoxSouth.Name = "txtBoxSouth";
             this.txtBoxSouth.Size = new System.Drawing.Size(158, 20);
             this.txtBoxSouth.TabIndex = 1;
@@ -236,7 +231,7 @@ namespace LandReg2023
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(52, 353);
+            this.label12.Location = new System.Drawing.Point(52, 366);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(88, 13);
             this.label12.TabIndex = 0;
@@ -244,7 +239,7 @@ namespace LandReg2023
             // 
             // TxtBoxEast
             // 
-            this.TxtBoxEast.Location = new System.Drawing.Point(148, 350);
+            this.TxtBoxEast.Location = new System.Drawing.Point(148, 363);
             this.TxtBoxEast.Name = "TxtBoxEast";
             this.TxtBoxEast.Size = new System.Drawing.Size(158, 20);
             this.TxtBoxEast.TabIndex = 1;
@@ -252,7 +247,7 @@ namespace LandReg2023
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(48, 379);
+            this.label13.Location = new System.Drawing.Point(48, 392);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(92, 13);
             this.label13.TabIndex = 0;
@@ -260,7 +255,7 @@ namespace LandReg2023
             // 
             // txtBoxWest
             // 
-            this.txtBoxWest.Location = new System.Drawing.Point(148, 376);
+            this.txtBoxWest.Location = new System.Drawing.Point(148, 389);
             this.txtBoxWest.Name = "txtBoxWest";
             this.txtBoxWest.Size = new System.Drawing.Size(158, 20);
             this.txtBoxWest.TabIndex = 1;
@@ -274,17 +269,17 @@ namespace LandReg2023
             this.label14.TabIndex = 0;
             this.label14.Text = "Other information of the Land";
             // 
-            // txtBoxotherinfo
+            // txtBoxinfo
             // 
-            this.txtBoxotherinfo.Location = new System.Drawing.Point(358, 88);
-            this.txtBoxotherinfo.Multiline = true;
-            this.txtBoxotherinfo.Name = "txtBoxotherinfo";
-            this.txtBoxotherinfo.Size = new System.Drawing.Size(258, 268);
-            this.txtBoxotherinfo.TabIndex = 1;
+            this.txtBoxinfo.Location = new System.Drawing.Point(358, 88);
+            this.txtBoxinfo.Multiline = true;
+            this.txtBoxinfo.Name = "txtBoxinfo";
+            this.txtBoxinfo.Size = new System.Drawing.Size(258, 268);
+            this.txtBoxinfo.TabIndex = 1;
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(541, 374);
+            this.btnNext.Location = new System.Drawing.Point(541, 389);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 2;
@@ -294,7 +289,7 @@ namespace LandReg2023
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(450, 374);
+            this.btnSave.Location = new System.Drawing.Point(450, 389);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 2;
@@ -302,17 +297,51 @@ namespace LandReg2023
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(55, 253);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(87, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Land Ownership:";
+            // 
+            // txtBoxConsInLand
+            // 
+            this.txtBoxConsInLand.FormattingEnabled = true;
+            this.txtBoxConsInLand.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.txtBoxConsInLand.Location = new System.Drawing.Point(148, 221);
+            this.txtBoxConsInLand.Name = "txtBoxConsInLand";
+            this.txtBoxConsInLand.Size = new System.Drawing.Size(158, 21);
+            this.txtBoxConsInLand.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Personal Land (User_ID)",
+            "Business Land (Busi_User_ID)",
+            "Government Land (Gov_User_ID)"});
+            this.comboBox1.Location = new System.Drawing.Point(148, 250);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(158, 21);
+            this.comboBox1.TabIndex = 3;
+            // 
             // InsertLandDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 429);
+            this.ClientSize = new System.Drawing.Size(660, 438);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtBoxConsInLand);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtBoxcity);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtBoxConsInLand);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtBoxLandtype);
             this.Controls.Add(this.label7);
@@ -330,14 +359,17 @@ namespace LandReg2023
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtBoxNorth);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtBoxotherinfo);
+            this.Controls.Add(this.txtBoxinfo);
             this.Controls.Add(this.txtBoxareaname);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(676, 477);
+            this.MinimumSize = new System.Drawing.Size(676, 477);
             this.Name = "InsertLandDetails";
             this.Text = "InsertLandDetails";
+            this.Load += new System.EventHandler(this.InsertLandDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,7 +392,6 @@ namespace LandReg2023
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBoxLandtype;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtBoxConsInLand;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtBoxNorth;
@@ -371,8 +402,11 @@ namespace LandReg2023
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtBoxWest;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtBoxotherinfo;
+        private System.Windows.Forms.TextBox txtBoxinfo;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox txtBoxConsInLand;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

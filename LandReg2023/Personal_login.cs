@@ -16,12 +16,12 @@ namespace LandReg2023
     {
         public OleDbConnection connection = new OleDbConnection();
         PersonalAccountManage pAccManage = new PersonalAccountManage(); // use to encrypt the password characters
-        public string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=G:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
+        public string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
 
         public Personal_Login()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=G:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
     }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -57,10 +57,11 @@ namespace LandReg2023
                         if (oleDbDataReader.HasRows == true)
                         {
                             connection.Close();
-                            User_Information User_Information = new User_Information();
+                            User_Information User_Information = new User_Information(txtBoxUserId.Text);
                             User_Information.Show();
+
                             this.Close();
-                            
+                            // get user information from the database and show it in the user_information
                         }
                         else
                         {

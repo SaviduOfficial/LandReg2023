@@ -30,15 +30,15 @@ namespace LandReg2023
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelUserId = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
+            this.DescriptiontxtBox = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,14 +50,6 @@ namespace LandReg2023
             this.label1.Size = new System.Drawing.Size(79, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Description:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(52, 101);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(486, 331);
-            this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
@@ -88,14 +80,14 @@ namespace LandReg2023
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pictureBox
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(609, 101);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 166);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.Location = new System.Drawing.Point(609, 97);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(157, 166);
+            this.pictureBox.TabIndex = 4;
+            this.pictureBox.TabStop = false;
             // 
             // btnPrint
             // 
@@ -116,6 +108,14 @@ namespace LandReg2023
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
+            // DescriptiontxtBox
+            // 
+            this.DescriptiontxtBox.Location = new System.Drawing.Point(52, 97);
+            this.DescriptiontxtBox.Multiline = true;
+            this.DescriptiontxtBox.Name = "DescriptiontxtBox";
+            this.DescriptiontxtBox.Size = new System.Drawing.Size(486, 335);
+            this.DescriptiontxtBox.TabIndex = 6;
+            // 
             // btnEdit
             // 
             this.btnEdit.Location = new System.Drawing.Point(236, 459);
@@ -129,19 +129,22 @@ namespace LandReg2023
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 527);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(842, 509);
+            this.Controls.Add(this.DescriptiontxtBox);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.labelUserId);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(858, 548);
+            this.MinimumSize = new System.Drawing.Size(858, 548);
             this.Name = "User_Information";
             this.Text = "User_Information";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.User_Information_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,13 +153,13 @@ namespace LandReg2023
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelUserId;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.TextBox DescriptiontxtBox;
         private System.Windows.Forms.Button btnEdit;
     }
 }

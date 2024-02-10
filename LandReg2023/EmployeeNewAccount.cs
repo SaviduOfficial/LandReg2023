@@ -13,13 +13,13 @@ namespace LandReg2023
 {
     public partial class EmployeeNewAccount : Form
     {
-        public string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=G:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
+        public string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
         OleDbConnection connection = new OleDbConnection();
         string imageLocation = "";
         public EmployeeNewAccount()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=G:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
 
 //Provider=Microsoft.ACE.OLEDB.12.0;Data 
 //Source=G:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb;Persist Security Info=False;";

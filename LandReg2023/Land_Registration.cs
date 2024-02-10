@@ -25,7 +25,7 @@ namespace LandReg2023
         List<string> temporyList;
         public OleDbConnection connection = new OleDbConnection();
 
-        public string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=G:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
+        public string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
 
         public Land_Registration()
         {
@@ -34,7 +34,7 @@ namespace LandReg2023
             getGPSLocations getGPSLocations = new getGPSLocations();
             listofPoints = new List<PointLatLng>();
             temporyList = new List<string>();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=G:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
 
         }
        
@@ -59,6 +59,8 @@ namespace LandReg2023
         {
             try
             {
+
+
                 // getting latitudes and longitudes
                 double lati = Convert.ToDouble(txtBoxLat.Text);
                 double longi = Convert.ToDouble(txtBoxLong.Text);
@@ -68,10 +70,28 @@ namespace LandReg2023
                 lstBoxcord.Items.Add("latitude: " + lati + ", " + "Longitude: " + longi);
                 temporyList.Add(Convert.ToString(lati + longi));
 
+
+                /*
+
+                try to make a string array that contain "latitudes-longitidues" items for each combination of cordinates
+                and store in database as a couple and when retriving data 
+
+                storing data is only on this class retreving is should in the owners account.
+
+                How to link the land and the owner - admin can assign the land id to a owner?????-
+
+                making it split from the hyphen and convert to double and plot it in the map
+
+                maybe use a for loop or foreach to iterate through the array
+
+                accessing a cordinate showing on the map and go to next cordinate likewise.
+
+                */
+
                 map.Position = new GMap.NET.PointLatLng(lati, longi);
                 listofPoints.Add(new PointLatLng(lati, longi));
 
-
+                
                 //create overlay
                 GMapOverlay markers = new GMapOverlay("markers");
 
@@ -80,6 +100,9 @@ namespace LandReg2023
 
                 //cover the map
                 map.Overlays.Add(markers);
+
+                txtBoxLat.Text = "";
+                txtBoxLong.Text = "";
             }
             catch (Exception ex)
             {
@@ -92,6 +115,9 @@ namespace LandReg2023
         {
             try
             {
+                txtBoxLat.Text = "";
+                txtBoxLong.Text = "";
+
                 var polygon = new GMapPolygon(listofPoints, "Land Area");
                 polygon.Stroke = new Pen(Color.Red, 2);
                 polygon.Fill = new SolidBrush(Color.FromArgb(30, Color.Red));
@@ -104,8 +130,12 @@ namespace LandReg2023
 
                 generateId = getGPSLocations.generateLandId(temporyList);// generate Id using tempory List 
                 MessageBox.Show(generateId);// generated id need to saved in a database
+                 // changing text of the add botton
+                btnAddCoord.Enabled = false;
 
-            }catch (Exception ex)
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -118,6 +148,8 @@ namespace LandReg2023
             listofPoints.Clear();
             lstBoxcord.Items.Clear();
             map.Overlays.Clear();
+            Area.Enabled = true;
+            btnAddCoord.Enabled = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -125,16 +157,16 @@ namespace LandReg2023
             try
             {
                 connection.Open();
-                OleDbCommand command = new OleDbCommand(); // if this not work type useing oledbCommand
+                OleDbCommand command = new OleDbCommand(); // if this not work type using oledbCommand
                 command.Connection = connection;
                 command.CommandText = "INSERT INTO Land_info (Land_ID, Cordinates) VALUES(@landid, @Cordinates)";
                 command.Parameters.AddWithValue("@landid", generateId);
-                command.Parameters.AddWithValue("@Cordinates", lstBoxcord.Text); // land id and cordinates need to enter only for 2 coordintes also works did not test this section
+                command.Parameters.AddWithValue("@Cordinates", lstBoxcord.Text); // land id and cordinates need to enter only for 2 coordintes also works, did not test this section
                 command.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("data saved");
 
-                InsertLandDetails insertLandDetails = new InsertLandDetails();
+                InsertLandDetails insertLandDetails = new InsertLandDetails(generateId);
                 insertLandDetails.Show();
                 this.Close();
                

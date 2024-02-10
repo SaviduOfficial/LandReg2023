@@ -44,9 +44,9 @@ namespace LandReg2023
             // btnPersonal
             // 
             this.btnPersonal.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnPersonal.Location = new System.Drawing.Point(226, 112);
+            this.btnPersonal.Location = new System.Drawing.Point(226, 101);
             this.btnPersonal.Name = "btnPersonal";
-            this.btnPersonal.Size = new System.Drawing.Size(89, 29);
+            this.btnPersonal.Size = new System.Drawing.Size(144, 52);
             this.btnPersonal.TabIndex = 1;
             this.btnPersonal.Text = "Personal";
             this.btnPersonal.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@ namespace LandReg2023
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 79);
+            this.label2.Location = new System.Drawing.Point(12, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 19);
             this.label2.TabIndex = 3;
@@ -87,7 +87,7 @@ namespace LandReg2023
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(100, 175);
+            this.label4.Location = new System.Drawing.Point(100, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 18);
             this.label4.TabIndex = 4;
@@ -105,9 +105,9 @@ namespace LandReg2023
             // 
             // btnGovBusi
             // 
-            this.btnGovBusi.Location = new System.Drawing.Point(226, 170);
+            this.btnGovBusi.Location = new System.Drawing.Point(226, 180);
             this.btnGovBusi.Name = "btnGovBusi";
-            this.btnGovBusi.Size = new System.Drawing.Size(89, 29);
+            this.btnGovBusi.Size = new System.Drawing.Size(144, 55);
             this.btnGovBusi.TabIndex = 1;
             this.btnGovBusi.Text = "Gov/Business";
             this.btnGovBusi.UseVisualStyleBackColor = true;
@@ -115,9 +115,9 @@ namespace LandReg2023
             // 
             // BtnLandReg
             // 
-            this.BtnLandReg.Location = new System.Drawing.Point(226, 286);
+            this.BtnLandReg.Location = new System.Drawing.Point(226, 275);
             this.BtnLandReg.Name = "BtnLandReg";
-            this.BtnLandReg.Size = new System.Drawing.Size(89, 29);
+            this.BtnLandReg.Size = new System.Drawing.Size(144, 51);
             this.BtnLandReg.TabIndex = 1;
             this.BtnLandReg.Text = "Employee";
             this.BtnLandReg.UseVisualStyleBackColor = true;
@@ -127,7 +127,7 @@ namespace LandReg2023
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(406, 109);
+            this.label6.Location = new System.Drawing.Point(406, 117);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(187, 26);
             this.label6.TabIndex = 5;
@@ -136,7 +136,7 @@ namespace LandReg2023
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(406, 170);
+            this.label7.Location = new System.Drawing.Point(406, 191);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(194, 39);
             this.label7.TabIndex = 5;

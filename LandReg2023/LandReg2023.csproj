@@ -110,6 +110,12 @@
     <Compile Include="Busi_Gov_Login.Designer.cs">
       <DependentUpon>Busi_Gov_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUser.Designer.cs">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,12 @@
     </Compile>
     <Compile Include="landTransfers.Designer.cs">
       <DependentUpon>landTransfers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land_Ownership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land_Ownership.Designer.cs">
+      <DependentUpon>Land_Ownership.cs</DependentUpon>
     </Compile>
     <Compile Include="Land_Registration.cs">
       <SubType>Form</SubType>
@@ -196,6 +208,9 @@
     <EmbeddedResource Include="Busi_Gov_Login.resx">
       <DependentUpon>Busi_Gov_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditUser.resx">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeGUI.resx">
       <DependentUpon>EmployeeGUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="landTransfers.resx">
       <DependentUpon>landTransfers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land_Ownership.resx">
+      <DependentUpon>Land_Ownership.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Land_Registration.resx">
       <DependentUpon>Land_Registration.cs</DependentUpon>

@@ -22,6 +22,9 @@ namespace LandReg2023
             Personal_Login personal_Login = new Personal_Login();
             personal_Login.Show();
 
+            string generateId = "E2240458";
+            InsertLandDetails insertLandDetails = new InsertLandDetails(generateId); // remove this after complete land details section
+            insertLandDetails.Show();
             //Land_Registration land_Registration = new Land_Registration();
             //land_Registration.Show();
         }
@@ -32,9 +35,9 @@ namespace LandReg2023
             busi_Gov_Login.Show();
         }
 
-        private void BtnLandReg_Click(object sender, EventArgs e)
+        private void BtnLandReg_Click(object sender, EventArgs e) // employee button
         {
-            Employee_login employee_Login = new Employee_login();
+            Employee_login employee_Login = new Employee_login(); 
             employee_Login.Show();
         }
     }

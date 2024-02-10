@@ -18,14 +18,15 @@ namespace LandReg2023
         public OleDbConnection connection = new OleDbConnection();
         PersonalAccountManage pAccManage = new PersonalAccountManage(); // use to encrypt the password characters
         static string user_id = "";
+        //Provider=Microsoft.ACE.OLEDB.12.0;Data Source = "D:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb"
 
         //new edited
-        public string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=G:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb"; // newly added
+        public string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb"; // newly added
 
         public NewPersonalAccount()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=G:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\ICT_PROJECT\C# Land Reg\LandReg2023\LandReg2023db.accdb";
 
 
         }

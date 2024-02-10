@@ -115,11 +115,11 @@ namespace LandReg2023
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 193);
+            this.label4.Location = new System.Drawing.Point(16, 198);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(191, 26);
+            this.label4.Size = new System.Drawing.Size(245, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "First press \"Area\" then again press the \r\n\"Add\" button to show the area";
+            this.label4.Text = "add all the cordinates and Click \"Finalize the area\"";
             // 
             // label3
             // 
@@ -182,11 +182,11 @@ namespace LandReg2023
             // Area
             // 
             this.Area.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Area.Location = new System.Drawing.Point(180, 161);
+            this.Area.Location = new System.Drawing.Point(157, 161);
             this.Area.Name = "Area";
-            this.Area.Size = new System.Drawing.Size(75, 23);
+            this.Area.Size = new System.Drawing.Size(98, 23);
             this.Area.TabIndex = 0;
-            this.Area.Text = "Area";
+            this.Area.Text = "Finalize the Area ";
             this.Area.UseVisualStyleBackColor = true;
             this.Area.Click += new System.EventHandler(this.btnArea_Click);
             // 
